@@ -26,3 +26,17 @@ C:\Users\weidemann\Desktop\WPF_Supernetting_IPv6\WPF_Supernetting_IPv6\obj\Debug
 C:\Users\weidemann\Desktop\WPF_Supernetting_IPv6\WPF_Supernetting_IPv6\obj\Debug\WPF_Supernetting_IPv6.csproj.CoreCompileInputs.cache
 C:\Users\weidemann\Desktop\WPF_Supernetting_IPv6\WPF_Supernetting_IPv6\obj\Debug\WPF_Supernetting.exe
 C:\Users\weidemann\Desktop\WPF_Supernetting_IPv6\WPF_Supernetting_IPv6\obj\Debug\WPF_Supernetting.pdb
+\\tc-fs\V090\weidemann\github\Subnetting_IPv6\WPF_Supernetting_IPv6\bin\Debug\WPF_Supernetting.exe.config
+\\tc-fs\V090\weidemann\github\Subnetting_IPv6\WPF_Supernetting_IPv6\bin\Debug\WPF_Supernetting.exe
+\\tc-fs\V090\weidemann\github\Subnetting_IPv6\WPF_Supernetting_IPv6\bin\Debug\WPF_Supernetting.pdb
+\\tc-fs\V090\weidemann\github\Subnetting_IPv6\WPF_Supernetting_IPv6\obj\Debug\WPF_Supernetting_IPv6.csprojAssemblyReference.cache
+\\tc-fs\V090\weidemann\github\Subnetting_IPv6\WPF_Supernetting_IPv6\obj\Debug\MainWindow.baml
+\\tc-fs\V090\weidemann\github\Subnetting_IPv6\WPF_Supernetting_IPv6\obj\Debug\MainWindow.g.cs
+\\tc-fs\V090\weidemann\github\Subnetting_IPv6\WPF_Supernetting_IPv6\obj\Debug\App.g.cs
+\\tc-fs\V090\weidemann\github\Subnetting_IPv6\WPF_Supernetting_IPv6\obj\Debug\WPF_Supernetting_MarkupCompile.cache
+\\tc-fs\V090\weidemann\github\Subnetting_IPv6\WPF_Supernetting_IPv6\obj\Debug\WPF_Supernetting.g.resources
+\\tc-fs\V090\weidemann\github\Subnetting_IPv6\WPF_Supernetting_IPv6\obj\Debug\WPF_Supernetting.Properties.Resources.resources
+\\tc-fs\V090\weidemann\github\Subnetting_IPv6\WPF_Supernetting_IPv6\obj\Debug\WPF_Supernetting_IPv6.csproj.GenerateResource.cache
+\\tc-fs\V090\weidemann\github\Subnetting_IPv6\WPF_Supernetting_IPv6\obj\Debug\WPF_Supernetting_IPv6.csproj.CoreCompileInputs.cache
+\\tc-fs\V090\weidemann\github\Subnetting_IPv6\WPF_Supernetting_IPv6\obj\Debug\WPF_Supernetting.exe
+\\tc-fs\V090\weidemann\github\Subnetting_IPv6\WPF_Supernetting_IPv6\obj\Debug\WPF_Supernetting.pdb
