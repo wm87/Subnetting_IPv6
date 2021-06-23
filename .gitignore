@@ -1,9 +1,7 @@
 
 *.cache
-*.cache
 *.baml
-*.baml
-*.cache
 *.cache
 WPF_Supernetting_IPv6\bin\*
 WPF_Supernetting_IPv6\obj\*
+.vs\*
