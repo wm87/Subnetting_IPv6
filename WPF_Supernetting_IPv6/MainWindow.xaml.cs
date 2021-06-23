@@ -1,6 +1,7 @@
 ﻿using IPV6;
 using System;
 using System.Data;
+using System.Text.RegularExpressions;
 using System.Windows;
 using System.Windows.Documents;
 using System.Windows.Input;
@@ -158,7 +159,7 @@ namespace WPF_Supernetting
 
         private void txtPrefix_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.Key == Key.Enter)
+            if (e.Key == Key.Enter && txtPrefix.Text != "")
                 Btn_Run_Click(sender, e);
         }
 
@@ -180,6 +181,15 @@ namespace WPF_Supernetting
                 output += string.Format("{0}|{1}|{2}|{3}\n", dr[0].ToString(), dr[1].ToString(), dr[2].ToString(), dr[3].ToString());
 
             Clipboard.SetText(string.Format("{0}", output));
+        }
+
+        private void NumberValidationTextBox(object sender, TextCompositionEventArgs e)
+        {
+            // RegExp Generator: https://codepen.io/weiyuan-lane/pen/NWPBLBG
+
+            // Range from 1 to 64 as valid prefix
+            Regex regex = new Regex("^((6[0-4])|([1-5][0-9]{1})|([1-9]))$");
+            e.Handled = !regex.IsMatch(txtPrefix.Text + e.Text);
         }
     }
 }
