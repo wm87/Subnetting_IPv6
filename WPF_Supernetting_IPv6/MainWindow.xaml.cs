@@ -1,7 +1,8 @@
 ﻿using IPV6;
 using System;
 using System.Data;
-using System.Linq;
+using System.Net;
+using System.Net.Sockets;
 using System.Text.RegularExpressions;
 using System.Windows;
 using System.Windows.Documents;
@@ -104,8 +105,13 @@ namespace WPF_Supernetting
 
         private void Btn_Run_Click(object sender, RoutedEventArgs e)
         {
-            ssc.IP = txt_ipv6.Text + "/" + txtPrefix.Text;
-            ssc.Calc();
+            if (IsValid_IPv6_IPAddress(txt_ipv6.Text))
+            {
+                ssc.IP = txt_ipv6.Text + "/" + txtPrefix.Text;
+                ssc.Calc();
+            }
+            else
+                txt_ipv6.Text = "not valid";
         }
 
         private void GivenSubnets()
@@ -193,16 +199,19 @@ namespace WPF_Supernetting
             e.Handled = !regex.IsMatch(txtPrefix.Text + e.Text);
         }
 
-        private void NumberValidationIPv6(object sender, TextCompositionEventArgs e)
+        public static bool IsValid_IPv6_IPAddress(string IpAddress)
         {
-            // RegExp Generator: https://codepen.io/weiyuan-lane/pen/NWPBLBG
+            bool flag = false;
+            if (!string.IsNullOrWhiteSpace(IpAddress))
+            {
+                IPAddress ip;
+                if (IPAddress.TryParse(IpAddress, out ip))
+                {
+                    flag = ip.AddressFamily == AddressFamily.InterNetworkV6;
+                }
+            }
 
-            //  if (txt_ipv6.Text.Contains("::") && e.Text.Contains(':'))
-
-            // Range from 1 to 64 as valid prefix
-            // Regex regex = new Regex("^[a-f0-9]{1,4}[:]{1,2}[a-f0-9]{1,4}[:]{1,2}[a-f0-9]{1,4}$");
-            Regex regex = new Regex("^([a-f]{1,4})");
-                e.Handled = regex.IsMatch(txt_ipv6.Text + e.Text);
+            return flag;
         }
     }
 }
