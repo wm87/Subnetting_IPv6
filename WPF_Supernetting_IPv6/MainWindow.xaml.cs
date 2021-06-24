@@ -1,6 +1,7 @@
 ﻿using IPV6;
 using System;
 using System.Data;
+using System.Linq;
 using System.Text.RegularExpressions;
 using System.Windows;
 using System.Windows.Documents;
@@ -183,13 +184,25 @@ namespace WPF_Supernetting
             Clipboard.SetText(string.Format("{0}", output));
         }
 
-        private void NumberValidationTextBox(object sender, TextCompositionEventArgs e)
+        private void NumberValidationPrefix(object sender, TextCompositionEventArgs e)
         {
             // RegExp Generator: https://codepen.io/weiyuan-lane/pen/NWPBLBG
 
             // Range from 1 to 64 as valid prefix
             Regex regex = new Regex("^((6[0-4])|([1-5][0-9]{1})|([1-9]))$");
             e.Handled = !regex.IsMatch(txtPrefix.Text + e.Text);
+        }
+
+        private void NumberValidationIPv6(object sender, TextCompositionEventArgs e)
+        {
+            // RegExp Generator: https://codepen.io/weiyuan-lane/pen/NWPBLBG
+
+            //  if (txt_ipv6.Text.Contains("::") && e.Text.Contains(':'))
+
+            // Range from 1 to 64 as valid prefix
+            // Regex regex = new Regex("^[a-f0-9]{1,4}[:]{1,2}[a-f0-9]{1,4}[:]{1,2}[a-f0-9]{1,4}$");
+            Regex regex = new Regex("^([a-f]{1,4})");
+                e.Handled = regex.IsMatch(txt_ipv6.Text + e.Text);
         }
     }
 }

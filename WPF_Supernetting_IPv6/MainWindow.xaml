@@ -124,7 +124,7 @@
                 <Grid.Effect>
                     <DropShadowEffect BlurRadius="15" Direction="-90" ShadowDepth="1" Color="black" />
                 </Grid.Effect>
-                <TextBox x:Name="txt_ipv6" TabIndex="0" Width="520" Height="50" Margin="145,12,0,13" HorizontalAlignment="Left" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" BorderThickness="0" FontSize="22" FontWeight="DemiBold" Text="2001:0db8:1111:0000:01ac:0000:0010:0000">
+                <TextBox x:Name="txt_ipv6" PreviewTextInput="NumberValidationIPv6" TabIndex="0" Width="520" Height="50" Margin="145,12,0,13" HorizontalAlignment="Left" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" BorderThickness="0" FontSize="22" FontWeight="DemiBold" Text="2001:0db8:1111:0000:01ac:0000:0010:0000" MaxLength="39">
                     <TextBox.Background>
                         <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
                             <GradientStop Offset="0.0" Color="#2e333a" />
@@ -280,7 +280,7 @@
                 <Grid.Effect>
                     <DropShadowEffect BlurRadius="15" Direction="-90" ShadowDepth="1" Color="black" />
                 </Grid.Effect>
-                <TextBox x:Name="txtPrefix" TabIndex="1" Width="134" Height="50" Margin="145,12,0,13" HorizontalAlignment="Left" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" BorderThickness="0" FontSize="22" FontWeight="DemiBold" Text="18" KeyDown="txtPrefix_KeyDown">
+                <TextBox x:Name="txtPrefix" PreviewTextInput="NumberValidationPrefix" TabIndex="1" Width="134" Height="50" Margin="145,12,0,13" HorizontalAlignment="Left" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" BorderThickness="0" FontSize="22" FontWeight="DemiBold" Text="18" KeyDown="txtPrefix_KeyDown">
                     <TextBox.Background>
                         <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
                             <GradientStop Offset="0.0" Color="#2e333a" />
@@ -350,7 +350,6 @@
                     </Paragraph>
                 </FlowDocument>
             </RichTextBox>
-            <Image HorizontalAlignment="Left" Height="723" Margin="-201,118,0,-149" VerticalAlignment="Top" Width="323" Source="a5d57bc10e40b518268eeb470d26ca13.jpg"/>
             <Label Content="created by Matthias" HorizontalAlignment="Left" Margin="-140,461,0,0" VerticalAlignment="Top" Height="69" Width="342" Foreground="White" RenderTransformOrigin="0.5,0.5" FontSize="24" FontStyle="Italic">
                 <Label.RenderTransform>
                     <TransformGroup>
