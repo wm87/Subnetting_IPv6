@@ -139,8 +139,7 @@
                 <TextBlock x:Name="txt_IpHeader" Width="64" Height="42" Margin="10,22,0,0" HorizontalAlignment="left" VerticalAlignment="Top" Background="Transparent" FontSize="22" Foreground="White" ><Run Text="IPv6"/></TextBlock>
                 <Grid Margin="190,274,423,-199" />
                 <TextBlock HorizontalAlignment="Left" Margin="644,20,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Background="Black"/>
-                <TextBox x:Name="txtIPv6Check" HorizontalAlignment="Center" Height="50" Margin="631,12,0,13" TextWrapping="Wrap" Text="0" VerticalAlignment="Center" Width="42" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Background="#FFF9EDED"/>
-                <Image x:Name="imgIPv6Check" HorizontalAlignment="Left" Height="42" Margin="87,20,0,0" VerticalAlignment="Top" Width="39"/>
+                <Image x:Name="imgIPv6Check" HorizontalAlignment="Left" Height="32" Margin="632,21,0,0" VerticalAlignment="Top" Width="32" />
             </Grid>
             <Grid x:Name="newCidr" Width="834" Height="76" Margin="805,119,0,497" HorizontalAlignment="Left" VerticalAlignment="Center">
                 <Grid.Background>

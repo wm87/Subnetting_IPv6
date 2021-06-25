@@ -21,6 +21,9 @@ namespace WPF_Supernetting
         private DataTable dt = new DataTable();
         private IPv6 ssc;
 
+        Uri resourceUri1 = new Uri("true.png", UriKind.Relative);
+        Uri resourceUri2 = new Uri("false.png", UriKind.Relative);
+
         private int counter = 0;
 
         public MainWindow()
@@ -39,6 +42,7 @@ namespace WPF_Supernetting
             dt.Columns.Add("Minimized", typeof(string));
             dgvISubnets.IsReadOnly = true;
 
+            imgIPv6Check.Source = null;
             Txt_ipv6_TextChanged(null,null);
         }
 
@@ -220,20 +224,28 @@ namespace WPF_Supernetting
         {
             if (IsValid_IPv6_IPAddress(txt_ipv6.Text))
             {
-                if (txtIPv6Check != null)
+                if (imgIPv6Check != null)
                 {
-                    txtIPv6Check.Text = "TRUE";
-                    Uri resourceUri1 = new Uri("hook_green.png", UriKind.Relative);
-                    imgIPv6Check.Source = new BitmapImage(resourceUri1);
+                    var bitmapImage = new BitmapImage();
+
+                    bitmapImage.BeginInit();
+                    bitmapImage.UriSource = resourceUri1;
+                    bitmapImage.EndInit();
+
+                    imgIPv6Check.Source = bitmapImage;
                 }
             }
             else
             {
-                if (txtIPv6Check != null)
+                if (imgIPv6Check != null)
                 {
-                    txtIPv6Check.Text = "FALSE";
-                    Uri resourceUri2 = new Uri("delete.png", UriKind.Relative);
-                    imgIPv6Check.Source = new BitmapImage(resourceUri2);
+                    var bitmapImage = new BitmapImage();
+
+                    bitmapImage.BeginInit();
+                    bitmapImage.UriSource = resourceUri2;
+                    bitmapImage.EndInit();
+
+                    imgIPv6Check.Source = bitmapImage;
                 }
 
             }
