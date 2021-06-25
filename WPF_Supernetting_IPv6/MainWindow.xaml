@@ -124,7 +124,7 @@
                 <Grid.Effect>
                     <DropShadowEffect BlurRadius="15" Direction="-90" ShadowDepth="1" Color="black" />
                 </Grid.Effect>
-                <TextBox x:Name="txt_ipv6" PreviewTextInput="NumberValidationIPv6" TabIndex="0" Width="520" Height="50" Margin="145,12,0,13" HorizontalAlignment="Left" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" BorderThickness="0" FontSize="22" FontWeight="DemiBold" Text="2001:0db8:1111:0000:01ac:0000:0010:0000" MaxLength="39">
+                <TextBox x:Name="txt_ipv6" TabIndex="0" Width="481" Height="50" Margin="145,12,0,13" HorizontalAlignment="Left" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" BorderThickness="0" FontSize="22" FontWeight="DemiBold" Text="2001:0db8:1111:0000:01ac:0000:0010:0000" MaxLength="39" TextChanged="Txt_ipv6_TextChanged">
                     <TextBox.Background>
                         <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
                             <GradientStop Offset="0.0" Color="#2e333a" />
@@ -136,8 +136,11 @@
                         <DropShadowEffect BlurRadius="15" Direction="-90" ShadowDepth="1" Color="black" />
                     </TextBox.Effect>
                 </TextBox>
-                <TextBlock x:Name="txt_IpHeader" Width="129" Height="42" Margin="10,22,0,0" HorizontalAlignment="left" VerticalAlignment="Top" Background="Transparent" FontSize="22" Foreground="White" Text="IPv6" />
+                <TextBlock x:Name="txt_IpHeader" Width="64" Height="42" Margin="10,22,0,0" HorizontalAlignment="left" VerticalAlignment="Top" Background="Transparent" FontSize="22" Foreground="White" ><Run Text="IPv6"/></TextBlock>
                 <Grid Margin="190,274,423,-199" />
+                <TextBlock HorizontalAlignment="Left" Margin="644,20,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Background="Black"/>
+                <TextBox x:Name="txtIPv6Check" HorizontalAlignment="Center" Height="50" Margin="631,12,0,13" TextWrapping="Wrap" Text="0" VerticalAlignment="Center" Width="42" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Background="#FFF9EDED"/>
+                <Image x:Name="imgIPv6Check" HorizontalAlignment="Left" Height="42" Margin="87,20,0,0" VerticalAlignment="Top" Width="39"/>
             </Grid>
             <Grid x:Name="newCidr" Width="834" Height="76" Margin="805,119,0,497" HorizontalAlignment="Left" VerticalAlignment="Center">
                 <Grid.Background>
@@ -292,7 +295,7 @@
                         <DropShadowEffect BlurRadius="15" Direction="-90" ShadowDepth="1" Color="black" />
                     </TextBox.Effect>
                 </TextBox>
-                <TextBlock x:Name="txt_IpHeader1" Width="129" Height="42" Margin="10,22,0,0" HorizontalAlignment="left" VerticalAlignment="Top" Background="Transparent" FontSize="22" Foreground="White" Text="Prefix" />
+                <TextBlock x:Name="txt_IpHeader1" Width="64" Height="42" Margin="10,22,0,0" HorizontalAlignment="left" VerticalAlignment="Top" Background="Transparent" FontSize="22" Foreground="White" Text="Prefix" />
                 <Grid Margin="190,274,423,-199" />
                 <TextBlock x:Name="txt_IpHeader1_Copy1" Width="129" Height="23" Margin="16,107,0,-55" HorizontalAlignment="left" VerticalAlignment="Center" Background="Transparent" FontSize="16" Foreground="White" Text="Minimized" />
                 <TextBlock x:Name="txt_IpHeader1_Copy2" Width="129" Height="24" Margin="16,135,0,-84" HorizontalAlignment="left" VerticalAlignment="Center" Background="Transparent" FontSize="16" Foreground="White" Text="Expanded" />

@@ -5,9 +5,11 @@ using System.Net;
 using System.Net.Sockets;
 using System.Text.RegularExpressions;
 using System.Windows;
+using System.Windows.Controls;
 using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
+using System.Windows.Media.Imaging;
 
 namespace WPF_Supernetting
 {
@@ -36,6 +38,8 @@ namespace WPF_Supernetting
             dt.Columns.Add("Last", typeof(string));
             dt.Columns.Add("Minimized", typeof(string));
             dgvISubnets.IsReadOnly = true;
+
+            Txt_ipv6_TextChanged(null,null);
         }
 
         private void Ss_IPv6Found(object sender, IPv6FoundEventArgs e)
@@ -110,8 +114,6 @@ namespace WPF_Supernetting
                 ssc.IP = txt_ipv6.Text + "/" + txtPrefix.Text;
                 ssc.Calc();
             }
-            else
-                txt_ipv6.Text = "not valid";
         }
 
         private void GivenSubnets()
@@ -212,6 +214,29 @@ namespace WPF_Supernetting
             }
 
             return flag;
+        }
+
+        private void Txt_ipv6_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (IsValid_IPv6_IPAddress(txt_ipv6.Text))
+            {
+                if (txtIPv6Check != null)
+                {
+                    txtIPv6Check.Text = "TRUE";
+                    Uri resourceUri1 = new Uri("hook_green.png", UriKind.Relative);
+                    imgIPv6Check.Source = new BitmapImage(resourceUri1);
+                }
+            }
+            else
+            {
+                if (txtIPv6Check != null)
+                {
+                    txtIPv6Check.Text = "FALSE";
+                    Uri resourceUri2 = new Uri("delete.png", UriKind.Relative);
+                    imgIPv6Check.Source = new BitmapImage(resourceUri2);
+                }
+
+            }
         }
     }
 }
